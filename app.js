@@ -22,14 +22,17 @@ var animalsss = []
 
 //_________________________________________________
 Animals.prototype.render = function () {
-  let $clone = $('#hi').clone()
-  // console.log($clone)
-  $clone.find('h2').text(this.title)
-  $clone.find('p').text(this.description)
-  $clone.find('img').attr('src', this.img)
-  $clone.removeAttr('id')
-  $clone.attr('class', this.keyword)
-  $('div').append($clone)
+  // let $clone = $('#hi').clone()
+  // // console.log($clone)
+  // $clone.find('h2').text(this.title)
+  // $clone.find('p').text(this.description)
+  // $clone.find('img').attr('src', this.img)
+  // $clone.removeAttr('id')
+  // $clone.attr('class', this.keyword)
+  
+  let $clone = $('#template').html()
+  var rendered = Mustache.render($clone, this);
+  $('div').append(rendered)
 
 }
 

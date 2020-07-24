@@ -23,17 +23,24 @@
 <label for="">sort by horns</label>
 
 
-    <section id="hi">
+    <!-- <section id="hi">
       <h2></h2>
       <img src="" alt="">
       <p></p>
-    </section>
+    </section> -->
+    <script id="template" type="x-tmpl-mustache">
+      <section id="{{keyword}}">
+        <h2>{{title}}</h2>
+        <img src="{{img}}" alt="">
+        <p>{{description}}</p>
+      </section>
+    </script>
 <div class="grid-container">
   </div>
   </main>
 
 
-
+  <script src="https://unpkg.com/mustache@latest"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js?fbclid=IwAR0DJ733gc-EMtPFyhhecSlS4-X-PcLw-5cRNWMXMEZfXHCqCXDBf8ApAks"></script>
   <script src="./app.js"></script>
 </body>
